@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+/* 기본 */
+* {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+button,
+select {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: auto;
+  }
+}
+
+input {
+  &[type=radio],
+  &[type=checkbox],
+  &[type=color],
+  &[type=file] {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: auto;
+    }
+  }
+
+  &[type=file] {
+    &::-webkit-file-upload-button {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      &::-webkit-file-upload-button {
+        cursor: auto;
+      }
+    }
+  }
+
+  &[type=time],
+  &[type=date] {
+    &::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      &::-webkit-calendar-picker-indicator {
+        cursor: auto;
+      }
+    }
+  }
+}
+
+::selection {
+  background-color: #4f84ff;
+  color: #fff;
+}
+
+/* 폰트 */
+:root {
+  font-size: 10px;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+optgroup {
+  color: #111;
+  line-height: 1.5;
+}
+
+body {
+  font-weight: 400;
+  word-break: keep-all;
+}
+
+/* 엘리먼트 > 리셋 */
+.el_reset {
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+
+  &:hover,
+  &:active {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+/* 엘리먼트 > 폼 */
+.el_form {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  resize: none;
+  width: 100%;
+
+  &:disabled {
+    color: inherit;
+    opacity: inherit;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+
+  &::-webkit-color-swatch-wrapper {
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch {
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+  }
+
+  &::-webkit-file-upload-button {
+    border: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    border: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+/* 공통 */
+.cm_portfolio {
+  font-size: 0;
+  text-align: center;
+  max-width: 190rem;
+  margin: 0 auto;
+
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+}
